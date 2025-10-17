@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/<your-username>/jenkins-ci-demo.git'
+                git branch: 'main', url: 'https://github.com/Thanusha2002/jenkins-ci-demo.git'
             }
         }
 
@@ -39,10 +39,10 @@ pipeline {
             junit 'tests/test-results.xml'
         }
         success {
-            echo '✅ Build successful!'
+            echo 'Build successful!'
         }
         failure {
-            echo '❌ Build failed!'
+            echo 'Build failed!'
         }
     }
 }
